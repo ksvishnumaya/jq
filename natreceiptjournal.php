@@ -1,4 +1,6 @@
-<html>
+<?php
+require('common.php');
+?><html>
 
 <body>
 <table border=2>
@@ -9,14 +11,8 @@
 <td>Total Number of Receipts given to Donors</td>
 </tr>
 
-		
-
 <?php
-		
-
-		$utype="poc";
-$con=mysql_connect("instance31796.db.xeround.com:18861", "ksvmaya","pass") or die("Could not connect to database. Please check your internet connection");
-$db= mysql_select_db("cfrdb",$con);
+$utype="poc";
 $q0=mysql_query("select id,name from user where usertype='rh';");
 while($r0=mysql_fetch_row($q0))
 {

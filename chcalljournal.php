@@ -1,4 +1,6 @@
-<html>
+<?php
+require('common.php');
+?><html>
 <head>
 	<meta charset="utf-8">
 	<title>jQuery UI Example Page</title>
@@ -156,8 +158,7 @@
 $id=$_COOKIE['id'];
 $utype="poc";
 $city_id=1;//$_COOKIE['city_id'];
-$con=mysql_connect("instance31796.db.xeround.com:18861", "ksvmaya","pass") or die("Could not connect to database. Please check your internet connection");
-$db= mysql_select_db("cfrdb",$con);
+
 $q4=mysql_query("select id,name from user where city_id='$city_id' and usertype='$utype';");
 while($pocid=mysql_fetch_row($q4))
 {

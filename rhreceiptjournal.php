@@ -1,4 +1,6 @@
-<html>
+<?php
+require('common.php');
+?><html>
 
 <body>
 <table border=2>
@@ -14,8 +16,6 @@
 <?php
 		$id=$_COOKIE['id'];
 		$utype="poc";
-$con=mysql_connect("instance31796.db.xeround.com:18861", "ksvmaya","pass") or die("Could not connect to database. Please check your internet connection");
-$db= mysql_select_db("cfrdb",$con);
 
 $q=mysql_query("select id,name from city where regionalhead='$id';");
 while($r=mysql_fetch_row($q))

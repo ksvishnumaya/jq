@@ -1,4 +1,6 @@
-<html>
+<?php
+require('common.php');
+?><html>
 <body>
 <form action="insertpoc.html" method="post">
  <input type="submit" name="Add POC" value="Add POC">
@@ -11,8 +13,7 @@
 		$city_id=$_COOKIE['city_id'];
 		$poc_id=$_COOKIE['poc_id'];
 		$id=$_COOKIE['id'];
-		$con=mysql_connect("instance31796.db.xeround.com:18861", "ksvmaya","pass") or die("Could not connect to database. Please check your internet connection");
-$db= mysql_select_db("cfrdb",$con);
+
 $q2=mysql_query("select target,no_of_vols from city where id='$city_id';");
 $r3=mysql_fetch_row($q2);
 $q=mysql_query("select id,name from user where city_id='$city_id' and usertype='poc';");

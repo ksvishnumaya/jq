@@ -1,4 +1,6 @@
-<html>
+<?php
+require('common.php');
+?><html>
 <head>
 	<meta charset="utf-8">
 	<title>jQuery UI Example Page</title>
@@ -159,8 +161,7 @@
 <?php
 $id=$_COOKIE['id'];
 $utype="poc";
-$con=mysql_connect("instance31796.db.xeround.com:18861", "ksvmaya","pass") or die("Could not connect to database. Please check your internet connection");
-$db= mysql_select_db("cfrdb",$con);
+
 $q1=mysql_query("select id,name from city where regionalhead='$id';");
 while($r1=mysql_fetch_row($q1))
 {

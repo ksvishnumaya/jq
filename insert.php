@@ -1,4 +1,6 @@
 <?php 
+require('common.php');
+
 $name=$_POST['name'];
 $phone=$_POST['phone'];
 $email=$_POST['email'];
@@ -9,8 +11,6 @@ $potentialcount=$_POST['pot_donor_count'];
 $potentialtarget=$_POST['pot_donor_target'];
 $utype="vol";
 $city_id=$_COOKIE['city_id'];
-$con=mysql_connect("instance31796.db.xeround.com:18861", "ksvmaya","pass") or die("Could not connect to database. Please check your internet connection");
-$db= mysql_select_db("cfrdb",$con);
 $q0=mysql_query("select id,email from user where email='$email';");
 $r0=mysql_fetch_row($q0);
 if($r0[1]!=$email)

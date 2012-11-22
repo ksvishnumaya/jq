@@ -1,5 +1,6 @@
-<html>
-
+<?php
+require('common.php');
+?><html>
 <body>
 <table border=2>
 <tr><td>Date</td>
@@ -13,11 +14,9 @@
 
 <?php
 
-		$city_id=$_COOKIE['city_id'];
-		$id=$_COOKIE['id'];
-		$utype="poc";
-$con=mysql_connect("instance31796.db.xeround.com:18861", "ksvmaya","pass") or die("Could not connect to database. Please check your internet connection");
-$db= mysql_select_db("cfrdb",$con);
+$city_id=$_COOKIE['city_id'];
+$id=$_COOKIE['id'];
+$utype="poc";
 
 $q=mysql_query("select id,name from user where city_id='$city_id' and usertype='$utype';");
 while($r=mysql_fetch_row($q))

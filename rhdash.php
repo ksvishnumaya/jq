@@ -1,4 +1,6 @@
-<!doctype html>
+<?php
+require('common.php');
+?><!doctype html>
 <html lang="us">
 <head>
 	<meta charset="utf-8">

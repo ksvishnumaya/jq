@@ -1,4 +1,6 @@
-<html>
+<?php
+require('common.php');
+?><html>
 
 <body>
 <table border=2>
@@ -13,8 +15,6 @@
 		$id=$_COOKIE['id'];
 		$city_id=$_COOKIE['city_id'];
 $utype="poc";
-		$con=mysql_connect("instance31796.db.xeround.com:18861", "ksvmaya","pass") or die("Could not connect to database. Please check your internet connection");
-$db= mysql_select_db("cfrdb",$con);
 $q=mysql_query("select id,name from user where usertype='$utype' and city_id='$city_id';");
 while($r=mysql_fetch_row($q))
 {

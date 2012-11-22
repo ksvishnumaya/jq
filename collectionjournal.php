@@ -1,8 +1,8 @@
-<?php 
+<?php
+require('common.php');
 
-		$id=$_COOKIE['id'];
-		$con=mysql_connect("instance31796.db.xeround.com:18861", "ksvmaya","pass") or die("Could not connect to database. Please check your internet connection");
-$db = mysql_select_db("cfrdb",$con);
+$id=$_COOKIE['id'];
+
 $q0=mysql_query("select id from user where poc_id='$id';");
 echo "<table border=2>
 <tr>

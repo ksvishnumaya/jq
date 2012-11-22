@@ -1,7 +1,7 @@
-<?php 
+<?php
+require('common.php');
+
 		$utype="poc";
-		$con=mysql_connect("instance31796.db.xeround.com:18861", "ksvmaya","pass") or die("Could not connect to database. Please check your internet connection");
-$db = mysql_select_db("cfrdb",$con);
 echo "<table border=2>
 <tr>
 <td>Week</td>

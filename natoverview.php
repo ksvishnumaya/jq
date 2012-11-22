@@ -1,4 +1,6 @@
-<html>
+<?php
+require('common.php');
+?><html>
 <body>
 <form action="Addrh.html" method="post">
  <input type="submit" name="AddRH" value="Add Regional Head">
@@ -18,12 +20,11 @@
 <td>Req target amount</td>
 <td>No of donor kits given to volunteers</td>
 <td>	No. of volunteers who made potential donor list</td></tr></h3>
-		</body>
-		<?php
-		$id=$_COOKIE['id'];
-		$utype="rh";
-		$con=mysql_connect("instance31796.db.xeround.com:18861", "ksvmaya","pass") or die("Could not connect to database. Please check your internet connection");
-$db= mysql_select_db("cfrdb",$con);
+</body>
+<?php
+$id=$_COOKIE['id'];
+$utype="rh";
+
 $q=mysql_query("select id,name from user where usertype='$utype';");
 while($r=mysql_fetch_row($q))
 {

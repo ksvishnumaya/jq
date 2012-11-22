@@ -1,18 +1,19 @@
-<html>
+<?php
+require('common.php');
+?><html>
 <body>
 <form action="insert.html" method="post">
  <input type="submit" name="Add Volunteer" value="Add volunteer">
 </form>
-		<table border=2><tr><td>Volunteer Name</td><td>	Phone Number</td><td>Email</td> <td>Target	</td><td>Avg vol target </td><td>Donor Kit Number	</td><td>Potential Donor count</td><td>	Potential Donor count Target</td></tr>
-		
-		</body>
+<table border=2><tr><td>Volunteer Name</td><td>	Phone Number</td><td>Email</td> <td>Target	</td><td>Avg vol target </td><td>Donor Kit Number	</td><td>Potential Donor count</td><td>	Potential Donor count Target</td></tr>
 
-		<?php
-		$city_id=$_COOKIE['city_id'];
-		$poc_id=$_COOKIE['poc_id'];
-		$id=$_COOKIE['id'];
-		$con=mysql_connect("instance31796.db.xeround.com:18861", "ksvmaya","pass") or die("Could not connect to database. Please check your internet connection");
-$db= mysql_select_db("cfrdb",$con);
+</body>
+
+<?php
+$city_id=$_COOKIE['city_id'];
+$poc_id=$_COOKIE['poc_id'];
+$id=$_COOKIE['id'];
+
 $q=mysql_query("select * from user where city_id='$city_id' and poc_id='$id';");
 $avg=mysql_query("select target,no_of_vols from city where id='$city_id';");
 $res=mysql_fetch_row($avg);

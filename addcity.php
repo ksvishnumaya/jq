@@ -1,4 +1,6 @@
 <?php 
+require('common.php');
+
 $phone=$_POST['phone'];
 $email=$_POST['chemail'];
 $pass=$_POST['pass'];
@@ -9,8 +11,7 @@ $volnum=$_POST['volnum'];
 $cityhead=$_POST['cityhead'];
 $id=$_COOKIE['id'];
 $utype="cityhead";
-$con=mysql_connect("instance31796.db.xeround.com:18861", "ksvmaya","pass") or die("Could not connect to database. Please check your internet connection");
-$db= mysql_select_db("cfrdb",$con);
+
 $q=mysql_query("INSERT INTO city(name,poc_num,no_of_vols,target,regionalhead) VALUES('$cityname','$pocneed','$volnum','$target','$id');") or die("Updation incorrect");
 $q1=mysql_query("select id from city where name='$cityname';");
 $r1=mysql_fetch_row($q1);
@@ -19,7 +20,3 @@ $q2=mysql_query("select id from user where name='$cityhead' and city_id='$r1[0]'
 $r2=mysql_fetch_row($q2);
 $q=mysql_query("UPDATE  city SET  cityhead_id =  '$r2[0]' WHERE  id ='$r1[0]';")or die("city head not created");
 require("Addcity.html");
-?>
-
-
-

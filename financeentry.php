@@ -1,4 +1,6 @@
 <?php
+require('common.php');
+
 $cash=$_POST['cash_amount'];
 $dl=$_POST['dl_amount'];
 $receipt=$_POST['receipt_count'];
@@ -15,8 +17,7 @@ if($ack_status='n')
 {
 	$status=0;
 }
-$con=mysql_connect("instance31796.db.xeround.com:18861", "ksvmaya","pass") or die("Could not connect to database. Please check your internet connection");
-$db= mysql_select_db("cfrdb",$con);
+
 $q2=mysql_query("INSERT INTO  financejournal (
 poc_id ,
 `date` ,
@@ -26,6 +27,5 @@ no_of_receipts_to_be_collected ,
 ack_obtained)
 VALUES ('$id',  '$date',  '$cash',  '$dlamount',  '$receipt',  '$status');") or die("could not enter");
 include("pocdash.php");
-?>
 
 	

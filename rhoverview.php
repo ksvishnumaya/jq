@@ -1,4 +1,6 @@
-<html>
+<?php
+require('common.php');
+?><html>
 <body>
 <form action="Addcity.html" method="post">
  <input type="submit" name="Add City" value="Add City">
@@ -7,8 +9,6 @@
 		</body>
 		<?php
 		$id=$_COOKIE['id'];
-		$con=mysql_connect("instance31796.db.xeround.com:18861", "ksvmaya","pass") or die("Could not connect to database. Please check your internet connection");
-$db= mysql_select_db("cfrdb",$con);
 $q1=mysql_query("select id,name,target,no_of_vols,cityhead_id,briefing_status,poc_num,target from city where regionalhead='$id';");
 while($r1=mysql_fetch_row($q1))
 {
