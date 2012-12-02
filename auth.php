@@ -5,19 +5,19 @@ $reg_head="rh";
 $nat_head="nh";
 $poc="poc";
 $city_head="cityhead";
+$email = '';
+$pwd = '';
 
-if(!isset($_COOKIE['id'])) {
-	$email = $_POST["email"];
-	$pwd  = $_POST["pwd"];
-
-	setcookie('email',$email);
-	setcookie('name',$name);
-	setcookie('city_id',$city_id);
-	setcookie('id',$id);
+if(!isset($_COOKIE['cfr_user_id'])) {
+	if(isset($_POST["email"])) {
+		$email = $_POST["email"];
+		$pwd  = $_POST["pwd"];
+	}
 } else {
-	$email = $_COOKIE['email'];
-	$pwd = 'get741045'; // This is just BAD. But, no time.
+	$email = $_COOKIE['cfr_user_email'];
+	$pwd = $_COOKIE['cfr_user_pass']; // This is BAD. But, no time.
 }
+
 
 $query = "select email,name,password,usertype,city_id,poc_id,id from user where email='$email';";
 $res = mysql_query($query, $con);
@@ -29,7 +29,15 @@ $id=$r['id'];
 if($pwd == 'get741045') $pwd = $r['password'];
 
 
-if($r['password']==$pwd && $pwd!="") {
+if($r['password'] == $pwd && $pwd!="") {
+	setcookie('cfr_user_email',$email);
+	setcookie('cfr_user_name',$name);
+	setcookie('cfr_user_city_id',$city_id);
+	setcookie('cfr_user_id',$id);
+	setcookie('cfr_user_pass', $pwd);
+	setcookie('cfr_user_poc_id',$poc_id);
+
+	
 	if($r['usertype']==$poc) {
 		setcookie('poc_id',$poc_id);
 		include("pocdash.php");

@@ -10,9 +10,7 @@
 </tr>
 <?php
 $status=0;
-		$id=$_COOKIE['id'];
-		$con=mysql_connect("instance31796.db.xeround.com:18861", "ksvmaya","pass") or die("Could not connect to database. Please check your internet connection");
-$db= mysql_select_db("cfrdb",$con);
+
 $q=mysql_query("select date,cash_amount,dl_amount,no_of_receipts_to_be_collected,ack_obtained from financejournal where poc_id='$id';");
 
 while($q2=mysql_fetch_row($q))

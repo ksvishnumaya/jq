@@ -14,8 +14,6 @@ require('common.php');
 
 
 <?php
-
-		$id=$_COOKIE['id'];
 		$utype="poc";
 $q=mysql_query("select id,name from city where regionalhead='$id'");
 while($r=mysql_fetch_row($q))

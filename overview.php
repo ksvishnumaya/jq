@@ -10,14 +10,11 @@ require('common.php');
 </body>
 
 <?php
-$city_id=$_COOKIE['city_id'];
-$poc_id=$_COOKIE['poc_id'];
-$id=$_COOKIE['id'];
-
 $q=mysql_query("select * from user where city_id='$city_id' and poc_id='$id';");
 $avg=mysql_query("select target,no_of_vols from city where id='$city_id';");
 $res=mysql_fetch_row($avg);
-$avgtarget=$res[0]/$res[1];
+$avgtarget = 0;
+if($res[1]) $avgtarget=$res[0]/$res[1];
 
 while($q2=mysql_fetch_row($q))
 {

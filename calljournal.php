@@ -153,7 +153,6 @@ require('common.php');
 <table border=2><tr><td>Volunteername</td><td>Date of call</td><td>Amount Pledged</td><td>Amount raised</td></tr></html>
 
 <?php
-$id=$_COOKIE['id'];
 $q3=mysql_query("select id from user where poc_id='$id';");
  
 while($volid=mysql_fetch_row($q3))

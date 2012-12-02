@@ -155,9 +155,7 @@ require('common.php');
 
 
 <?php
-$id=$_COOKIE['id'];
 $utype="poc";
-$city_id=1;//$_COOKIE['city_id'];
 
 $q4=mysql_query("select id,name from user where city_id='$city_id' and usertype='$utype';");
 while($pocid=mysql_fetch_row($q4))

@@ -5,7 +5,7 @@ $date=$_POST['date'];
 $collected=$_POST['collected'];
 $given=$_POST['given'];
 $ack=$_POST['ack_status'];
-$id=$_COOKIE['id'];
+
 $status=0;
 if($ack=='y')
 {

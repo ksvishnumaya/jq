@@ -6,9 +6,7 @@ require('common.php');
  <input type="submit" name="Add City" value="Add City">
 </form>
 		<table border=2><tr><td>City</td><td>	Num of volunteers</td><td>CH Name</td> <td>Briefing Status	</td><td>No. of POCs found </td><td>No. of POCS needed</td><td>No. of POCs trained</td><td>Total target taken</td><td>Required target</td><td>Total donor kits given to vols</td><td>Number of vol.s who made potential donors list</td></tr>
-		</body>
 		<?php
-		$id=$_COOKIE['id'];
 $q1=mysql_query("select id,name,target,no_of_vols,cityhead_id,briefing_status,poc_num,target from city where regionalhead='$id';");
 while($r1=mysql_fetch_row($q1))
 {
@@ -29,5 +27,7 @@ echo "<tr><td>$r1[1]</td><td>$r1[3]</td><td>$r[0]</td><td>$r1[5]</td><td>$r2[0]<
 }
 
 ?>
+		</body>
+
 </table>
 </html>

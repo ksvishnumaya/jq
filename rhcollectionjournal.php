@@ -1,7 +1,6 @@
 <?php
 require('common.php');
 
-$id=$_COOKIE['id'];
 $utype="poc";
 echo "<table border=2>
 <tr>

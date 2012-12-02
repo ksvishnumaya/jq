@@ -1,7 +1,7 @@
 <html lang="us">
 <head>
 	<meta charset="utf-8">
-	<title>jQuery UI Example Page</title>
+	<title>CFR Database</title>
 	<link href="css/start/jquery-ui-1.9.1.custom.css" rel="stylesheet">
 	<script src="js/jquery-1.8.2.js"></script>
 	<script src="js/jquery-ui-1.9.1.custom.js"></script>

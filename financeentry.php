@@ -7,7 +7,7 @@ $receipt=$_POST['receipt_count'];
 $dlamount=$_POST['dl_amount'];
 $date=$_POST['date'];
 $ack_status=$_POST['ack_status'];
-$id=$_COOKIE['id'];
+
 $status=0;
 if($ack_status='y')
 {

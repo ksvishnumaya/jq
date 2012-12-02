@@ -10,9 +10,6 @@ require('common.php');
 
 		</body>
 		<?php
-		$city_id=$_COOKIE['city_id'];
-		$poc_id=$_COOKIE['poc_id'];
-		$id=$_COOKIE['id'];
 
 $q2=mysql_query("select target,no_of_vols from city where id='$city_id';");
 $r3=mysql_fetch_row($q2);

@@ -1,7 +1,6 @@
 <?php
 require('common.php');
 
-$city_id=$_COOKIE['city_id'];
 $utype="poc";
 $q0=mysql_query("select id,name from user where city_id='$city_id' and usertype='$utype';");
 echo "<table border=2>

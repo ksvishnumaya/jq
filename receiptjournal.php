@@ -11,8 +11,6 @@ require('common.php');
 </tr>
 <?php
 $status=0;
-		$city_id=$_COOKIE['city_id'];
-		$id=$_COOKIE['id'];
 
 $q=mysql_query("select date,no_of_receipts_collected,no_of_receipts_gvn_to_vol,ack_status from receiptjournal where poc_id='$id';");
 

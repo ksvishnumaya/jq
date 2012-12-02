@@ -22,7 +22,6 @@ require('common.php');
 <td>	No. of volunteers who made potential donor list</td></tr></h3>
 </body>
 <?php
-$id=$_COOKIE['id'];
 $utype="rh";
 
 $q=mysql_query("select id,name from user where usertype='$utype';");

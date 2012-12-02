@@ -9,7 +9,7 @@ $target=$_POST['target'];
 $pocneed=$_POST['pocneed'];
 $volnum=$_POST['volnum'];
 $cityhead=$_POST['cityhead'];
-$id=$_COOKIE['id'];
+
 $utype="cityhead";
 
 $q=mysql_query("INSERT INTO city(name,poc_num,no_of_vols,target,regionalhead) VALUES('$cityname','$pocneed','$volnum','$target','$id');") or die("Updation incorrect");

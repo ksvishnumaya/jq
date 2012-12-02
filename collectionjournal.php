@@ -1,8 +1,6 @@
 <?php
 require('common.php');
 
-$id=$_COOKIE['id'];
-
 $q0=mysql_query("select id from user where poc_id='$id';");
 echo "<table border=2>
 <tr>

@@ -5,12 +5,12 @@ $name=$_POST['name'];
 $phone=$_POST['phone'];
 $email=$_POST['email'];
 $target=$_POST['target'];
-$poc_id=$_COOKIE['id'];
+$poc_id=$id;
 $donorkit=$_POST['donorkitnumber'];
 $potentialcount=$_POST['pot_donor_count'];
 $potentialtarget=$_POST['pot_donor_target'];
 $utype="vol";
-$city_id=$_COOKIE['city_id'];
+
 $q0=mysql_query("select id,email from user where email='$email';");
 $r0=mysql_fetch_row($q0);
 if($r0[1]!=$email)
