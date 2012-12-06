@@ -2,7 +2,7 @@
 require('common.php');
 
 $name=$_POST['volname'];
-$date=$_POST['calldate'];
+$date=date('Y-m-d', strtotime($_POST['calldate']));
 $pledged=$_POST['pledged'];
 $raised=$_POST['raised'];
 $callerid=$id;

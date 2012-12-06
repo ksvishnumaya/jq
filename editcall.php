@@ -63,7 +63,7 @@
 echo"<h1>Edit Call Journal</h1>
 <form id='form1' action='editcalljournal.php' method='post'>
 	<table><tr><td>name</td><td><input type='text' name='volname'></td></tr>
-		<tr><td>date</td><td><input type='date' name='calldate'></td></tr>
+		<tr><td>date(Use YYYY-MM-DD Format)</td><td><input type='date' name='calldate'></td></tr>
 		<tr><td>Pledged Amount</td><td><input type='text' name='pledged'></td></tr>
 		<tr><td>Raised Amount</td><td><input type='raised' name='raised'></td></tr>
 		<tr><td><input type='submit' value='save' class='button'></td></tr></table>
