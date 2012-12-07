@@ -24,12 +24,11 @@ $name=$r['name'];
 $city_id=$r['city_id'];
 $poc_id=$r['poc_id'];
 
-
 if($r['password'] == $pwd && $pwd!="") {
 	setcookie('cfr_user_email',$email);
 	setcookie('cfr_user_name',$name);
 	setcookie('cfr_user_city_id',$city_id);
-	setcookie('cfr_user_id',$id);
+	setcookie('cfr_user_id',$r['id']);
 	setcookie('cfr_user_pass', $pwd);
 	setcookie('cfr_user_poc_id',$poc_id);
 	
