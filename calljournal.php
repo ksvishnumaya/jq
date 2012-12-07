@@ -171,7 +171,7 @@ echo "<tr><td>$volname[0]</td>
 <td>$res[0]</td>
 <td>$res[1]</td>
 <td>$res[2]</td>
-<td><form action='editcall.php' method='post'><input type='submit' value='save' class='button'></form></td></tr> ";
+<td><form action='editcall.php' method='post'><input type='submit' value='Edit' class='button'></form></td></tr> ";
 
 }
 
@@ -184,7 +184,7 @@ echo"<form id='form1' action='callentry.php' method='post'>
 		<td><input type='date' name='calldate'></td>
 		<td><input type='text' name='pledged'></td>
 		<td><input type='raised' name='raised'></td>
-		<td><input type='submit' value='Edit' class='button'></td>
+		<td><input type='submit' value='Save' class='button'></td>
 	</tr></form>";
 
 }

