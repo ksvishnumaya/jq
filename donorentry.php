@@ -9,7 +9,7 @@ $phone=$_POST['phone'];
 $address=$_POST['address'];
 $tax=$_POST['80g'];
 $pan=$_POST['pan'];
-$cityid=$_COOKIE['city_id'];
+$cityid=$_COOKIE['cfr_user_city_id'];
 $status=$_POST['receiptstat'];
 $q2=mysql_query("INSERT INTO donor (dl_no, city_id, vol_id,name, amount,phone, email,pan,address, 80G, billstatus) VALUES ('$dl','$cityid','$vol','$donorname','$amount','$phone','$email','$pan','$address','$tax','$status');") or die("data entry failed");
 include("pocdash.php");

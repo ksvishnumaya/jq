@@ -25,10 +25,28 @@ echo "<tr><td>$r[1]</td>
 <td>$r[5]</td>
 <td>$r[7]</td>
 <td>$r[6]</td>
-<td>$r[9]</td>
-<td>$r[10]</td>
-<td>$r[8]</td>
-<td>$r[11]</td></tr>"; 
+<td>$r[9]</td>";
+if($r[10]==0)
+{
+echo "<td>n</td>";
+}
+else
+{
+
+echo "<td>y</td>";
+
+}
+echo"<td>$r[8]</td>";
+if($r[11]==0)
+{
+echo "<td>n</td>";
+}
+else
+{
+
+echo "<td>y</td>";
+
+}
 }
 echo "<form id='form1' method='post' action='donorentry.php'>
 		<tr><td><input type='text' name='dlnumber'</td>
@@ -37,9 +55,9 @@ echo "<form id='form1' method='post' action='donorentry.php'>
 		<td><input type='text' name='email'></td>
 		<td><input type='text' name='phone'></td>
 		<td><input type='text' name ='address'></td>
-		<td><input type='text' name='80g'>	</td>
+		<td><select name ='80g'><option value='1'>yes</option><option value='0'>no</option></select></td>
 		<td><input type='text' name='pan'></td>
-		<td><input type='text' name='receiptstat'</td>
+		<td><select name ='receiptstat'><option value='1'>yes</option><option value='0'>no</option></select></td>
 		<td><input type='submit' name='save' value='save'></tr></table>";
 
 ?>

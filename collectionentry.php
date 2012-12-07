@@ -1,7 +1,7 @@
 <?php
 require('common.php');
 
-$collector=$_COOKIE['id'];
+$collector=$_COOKIE['cfr_user_id'];
 $giver=$_POST['name'];
 $week=$_POST['week'];
 $collection=$_POST['amountcollected'];

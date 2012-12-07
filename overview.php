@@ -21,11 +21,11 @@ while($q2=mysql_fetch_row($q))
 
 	if($q2[6]>=$avgtarget)
 	{
-echo "<tr><td>$q2[1]</td><td>$q2[2]</td><td>$q2[3]</td><td bgcolor='green'>$q2[6]</td><td>$avgtarget</td><td>$q2[7]</td><td>$q2[8]</td><td>$q2[9]</td></tr>";
+echo "<tr><td><a  href='voltracker.php?vol=$q2[0]'>$q2[1]</a></td><td>$q2[2]</td><td>$q2[3]</td><td bgcolor='green'>$q2[6]</td><td>$avgtarget</td><td>$q2[7]</td><td>$q2[8]</td><td>$q2[9]</td></tr>";
 }
 else
 {
-	echo "<tr><td>$q2[1]</td><td>$q2[2]</td><td>$q2[3]</td><td bgcolor='red'>$q2[6]</td><td>$avgtarget</td><td>$q2[7]</td><td>$q2[8]</td><td>$q2[9]</td></tr>";
+	echo "<tr><td><a  href='voltracker.php?vol=$q2[0]'>$q2[1]</a></td><td>$q2[2]</td><td>$q2[3]</td><td bgcolor='red'>$q2[6]</td><td>$avgtarget</td><td>$q2[7]</td><td>$q2[8]</td><td>$q2[9]</td></tr>";
 }
 }
 		
