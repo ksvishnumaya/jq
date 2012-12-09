@@ -189,7 +189,7 @@ echo"<form id='form1' action='callentry.php' method='post'>
 
 }
 
-$q2=mysql_query("select sum(raised), sum(pledged) from calljournal where callerid='$id' and calleeid!=0;");
+$q2=mysql_query("select raised, pledged from calljournal where callerid='$id' and calleeid!=0;");
 $r2=mysql_fetch_row($q2);
 echo "<tr bgcolor='green'><td></td><td>Total</td><td>$r2[1]</td><td>$r2[0]</td></tr>";
 echo "</table>";

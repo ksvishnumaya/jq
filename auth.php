@@ -31,6 +31,14 @@ if($r['password'] == $pwd && $pwd!="") {
 	setcookie('cfr_user_id',$r['id']);
 	setcookie('cfr_user_pass', $pwd);
 	setcookie('cfr_user_poc_id',$poc_id);
+	if(isset($_COOKIE['cfr_user_id'])) {
+	$city_id=0;
+	if(isset($_COOKIE['cfr_user_city_id'])) $city_id = $_COOKIE['cfr_user_city_id'];
+	$poc_id=0;
+	if(isset($_COOKIE['cfr_user_poc_id'])) $poc_id=$_COOKIE['cfr_user_poc_id'];
+	$id=$_COOKIE['cfr_user_id'];
+}
+
 	
 	if($r['usertype']==$poc) {
 		setcookie('poc_id',$poc_id);

@@ -11,7 +11,7 @@ require('common.php');
 		</body>
 		<?php
 
-$q2=mysql_query("select target,no_of_vols from city where id='$city_id';");
+$q2=mysql_query("select target*1.4,no_of_vols from city where id='$city_id';");
 $r3=mysql_fetch_row($q2);
 $q=mysql_query("select id,name from user where city_id='$city_id' and usertype='poc';");
 while($r=mysql_fetch_row($q))

@@ -14,7 +14,7 @@ $q=mysql_query("select * from user where city_id='$city_id' and poc_id='$id';");
 $avg=mysql_query("select target,no_of_vols from city where id='$city_id';");
 $res=mysql_fetch_row($avg);
 $avgtarget = 0;
-if($res[1]) $avgtarget= round($res[0]/$res[1], 2);
+if($res[1]) $avgtarget= round((($res[0]/$res[1])*1.4), 2);
 
 while($q2=mysql_fetch_row($q))
 {
