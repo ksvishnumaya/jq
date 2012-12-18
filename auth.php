@@ -5,6 +5,8 @@ $reg_head="rh";
 $nat_head="nh";
 $poc="poc";
 $city_head="cityhead";
+$nat_finance="cfo";
+
 $email = '';
 $pwd = '';
 
@@ -52,6 +54,9 @@ if($r['password'] == $pwd && $pwd!="") {
 	}
 	if($r['usertype']==$nat_head) {
 		include("natdash.php");
+	}
+	if($r['usertype']==$nat_finance){
+		include("finance.php");
 	}
 }
 else if($r['password']!=$pwd || $r['password']=="") {
