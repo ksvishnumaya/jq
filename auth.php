@@ -57,7 +57,7 @@ if($r['password'] == $pwd && $pwd!="") {
 		include("natdash.php");
 	}
 	if($r['usertype']==$nat_finance){
-		include("finance.php");
+		include("fcdash.php");
 	}
 	if($r['usertype']==$finance){
 		include("cityfinance.php");

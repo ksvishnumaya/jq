@@ -8,6 +8,7 @@ while($r=mysql_fetch_row($q))
 {
 echo "<a href= 'donorlist.php?cityid=$r[0]'>$r[1]</a><br>";
 }
+echo "<a href= 'fcdash.php'>Back </a>";
 ?>
 </body
 

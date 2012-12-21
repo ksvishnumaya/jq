@@ -1,6 +1,4 @@
-<?php
-require('common.php');
-?><!doctype html>
+<!doctype html>
 <html lang="us">
 <head>
 	<meta charset="utf-8">
@@ -10,6 +8,7 @@ require('common.php');
 	<script src="js/jquery-ui-1.9.1.custom.js"></script>
 	<script>
 	$(function() {
+
 		
 		$( "#accordion" ).accordion();
 		
@@ -108,8 +107,13 @@ require('common.php');
 				$( this ).removeClass( "ui-state-hover" );
 			}
 		);
+
+
+
 	});
+
 	</script>
+
 	<style>
 	body{
 		font: 62.5% "Trebuchet MS", sans-serif;
@@ -139,7 +143,7 @@ require('common.php');
 		position: relative;
 		padding: 4px 0;
 		cursor: pointer;
-		float: left;
+		float: left;-
 		list-style: none;
 	}
 	#icons span.ui-icon {
@@ -149,8 +153,7 @@ require('common.php');
 	</style>
 </head>
 <body>
-
-<h1>National Dashboard</h1>
+<h1>City Dashboard</h1>
 
 <!-- Accordion -->
 <!-- Autocomplete -->
@@ -158,59 +161,28 @@ require('common.php');
 <!-- Tabs -->
 <div id="tabs">
 	<ul>
-		<li><a href="#tabs-1">Overview</a></li>
-		<li><a href="#tabs-2">Call Journal</a></li>
-		<li><a href="#tabs-3">Collection Journal</a></li>
-		<li><a href="#tabs-4">Reciept Journal</a></li>
-		<li><a href="#tabs-5">Finance Journal</a></li>
-		<li><a href="#tabs-6">Deposit Register</a></li>
+		<li><a href="#tabs-1">Donor Details</a></li>
+		<li><a href="#tabs-2">deposit register</a></li>
+		
+		<!--li><a href="#tabs-6">Deposit Register</a></li-->
 
 	</ul>
+
 	<div id="tabs-1">
-		<?php
-		include("natoverview.php");
-		?>
-	</div>
-	<div id="tabs-2">
 <?php
-
-include("natcalljournal.php");
-?>
-	</div>
-	<div id="tabs-3">
-
-<?php
-include("natcollectionjournal.php");
-?>
-
-</div>
-
-<div id="tabs-4">
-
-<?php
-include("natreceiptjournal.php");
-?>
-
-
-</div>
-<div id="tabs-5">
-<?php
-include("natfinancejournal.php");
-?>
-
-
-</div>
-<div id="tabs-6">
-<?php
-include("depositentry.php");
-
-?>
-</div>
+	include("finance.php");
+	?>
 
 		
+	</div>
+
+	<div id="tabs-2">
+		<?php
+include("depositjournal.php");
+?>
+
 </div>
-
-
-
+	
+	</div>
 </body>
 </html>
