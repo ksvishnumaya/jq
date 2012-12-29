@@ -1,14 +1,11 @@
-<html>
-
 <?php
+include("common.php");
 //setcookie('city',$city);
-echo "<title>
-	Donor Details
-</title>
+echo "<html><title>Donor Details</title>
 <body>
 <table border=2>
 <tr><td>DL Number</td><td>Name</td><td> Amount</td><td> Phone</td><td>Email</td><td>PAN</td><td>Address</td><td>80g</td><td>Recieved DL</td></tr>";
-include("common.php");
+
 $city=$_GET['cityid'];
 
 $q=mysql_query("select * from donor where city_id='$city';");
