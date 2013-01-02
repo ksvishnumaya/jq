@@ -12,15 +12,11 @@ $q=mysql_query("select * from donor where city_id='$city';");
 while($r=mysql_fetch_row($q))
 {
 	echo "<tr><td>$r[1]</td><td>$r[4]</td><td>$r[5]</td><td>$r[6]</td><td>$r[7]</td><td>$r[8]</td><td>$r[9]</td><td></td>";
-	if($r[12]==0)
-{
-	echo "<td><form action='gotdl.php?id=$r[0]&amp;cityid=$city' method='post'><input type='submit' value='Recieved'></form></td></tr>";
-}	
-
-if($r[12]==1)
-{
-	echo "<td>Recieved</td></tr>";
-}
+	if($r[13]==0) {
+		echo "<td><form action='gotdl.php?id=$r[0]&amp;cityid=$city' method='post'><input type='submit' value='Recieved'></form></td></tr>";
+	} else {
+		echo "<td>Recieved</td></tr>";
+	}
 }
 //echo "<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><input type='submit' value ='save'></form>";
 ?>
