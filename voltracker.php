@@ -57,6 +57,7 @@ echo "<form id='form1' method='post' action='donorentry.php'>
 		<td><input type='text' name ='address'></td>
 		<td><select name ='80g'><option value='1'>yes</option><option value='0'>no</option></select></td>
 		<td><input type='text' name='pan'></td>
+		<td><select name ='ereceipt'><option value='1'>yes</option><option value='0'>no</option></select></td>
 		<td><select name ='receiptstat'><option value='1'>yes</option><option value='0'>no</option></select></td>
 		<td><input type='submit' name='save' value='save'></tr></table>";
 
