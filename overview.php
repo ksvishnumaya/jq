@@ -10,7 +10,7 @@ require('common.php');
 </body>
 
 <?php
-$q=mysql_query("select * from user where city_id='$city_id' and poc_id='$id';");
+$q=mysql_query("select * from user where city_id='$city_id' and poc_id='$id' and city_id!=0;");
 $avg=mysql_query("select target,no_of_vols from city where id='$city_id';");
 $res=mysql_fetch_row($avg);
 $avgtarget = 0;
