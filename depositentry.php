@@ -1,5 +1,5 @@
 <?php
-include("commmon.php");
+include("common.php");
 $cityid=$_GET['id'];
 $amount=$_POST['amount'];
 $date=$_POST['date'];
