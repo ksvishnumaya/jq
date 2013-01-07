@@ -22,7 +22,7 @@ echo "</table>";
 ?>
 
 <form id = deposit action="depositentry.php?id=$id" method= post>
-	<input type= "text" name ="date">
+	<input type= "date" name ="date">
 	<input type="text" name="amount">
 	<input type= "submit" name="Save">
 	</form>
