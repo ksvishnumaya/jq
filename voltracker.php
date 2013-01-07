@@ -12,7 +12,9 @@ echo"	<table border=2>
 		<td>E-Mail id</td>
 		<td>	Phone number</td>
 		<td>	Address</td><td>	80G Needed (Y/N)	</td>
+		
 		<td>PAN number</td>
+		<td>E-Receipt Required?</td>
 		<td>	Final Receipt issued (Y/N)</td></tr>";
 
 //$id=$_COOKIE['id'];
