@@ -11,18 +11,19 @@ echo"	<table border=2>
 		<td>Amount of Donation	</td>
 		<td>E-Mail id</td>
 		<td>	Phone number</td>
-		<td>	Address</td><td>	80G Needed (Y/N)	</td>
-		
+		<td>	Address</td>
+		<td>	80G Needed (Y/N)	</td>
 		<td>PAN number</td>
 		<td>E-Receipt Required?</td>
 		<td>	Final Receipt issued (Y/N)</td></tr>";
 
 //$id=$_COOKIE['id'];
 //$cityid=$_COOKIE['city_id'];
-$q=mysql_query("select * from donor where vol_id='$vol'; ");
+   $q=mysql_query("select * from donor where vol_id='$vol'; ");
 while($r=mysql_fetch_row($q))
 {
-echo "<tr><td>$r[1]</td>
+echo "<tr>
+<td>$r[1]</td>
 <td>$r[4]</td>
 <td>$r[5]</td>
 <td>$r[7]</td>
@@ -38,8 +39,20 @@ else
 echo "<td>y</td>";
 
 }
+
 echo"<td>$r[8]</td>";
+
 if($r[11]==0)
+{
+echo "<td>n</td>";
+}
+else
+{
+
+echo "<td>y</td>";
+}
+
+if($r[12]==0)
 {
 echo "<td>n</td>";
 }
