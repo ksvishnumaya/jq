@@ -17,7 +17,7 @@ echo $dl;
 echo $vol;
 $status=$_POST['receiptstat'];
 $q2=mysql_query("INSERT INTO donor (dl_no, city_id, vol_id,name, amount,phone, email,pan,address, 80G,ereceipt,billstatus) VALUES
- ('$dl','$cityid','$vol','$donorname',$amount,$phone,'$email','$pan','$address',$tax,$receipt,$status);") or die("data entry failed");
+ ('$dl','$cityid','$vol','$donorname',$amount,'$phone','$email','$pan','$address',$tax,$receipt,$status);") or die("data entry failed");
 
 include("pocdash.php");
 ?>
