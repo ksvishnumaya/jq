@@ -62,6 +62,7 @@ else
 echo "<td>y</td>";
 
 }
+echo "<td><a href='donoredit.php?id=$r[0]'>Edit</a></td></tr>";
 }
 echo "<form id='form1' method='post' action='donorentry.php'>
 		<tr><td><input type='text' name='dlnumber'</td>
@@ -74,6 +75,7 @@ echo "<form id='form1' method='post' action='donorentry.php'>
 		<td><input type='text' name='pan'></td>
 		<td><select name ='ereceipt'><option value='1'>yes</option><option value='0'>no</option></select></td>
 		<td><select name ='receiptstat'><option value='1'>yes</option><option value='0'>no</option></select></td>
-		<td><input type='submit' name='save' value='save'></tr></table>";
+		<td><input type='submit' name='save' value='save'>
+		</tr></table>";
 
 ?>
